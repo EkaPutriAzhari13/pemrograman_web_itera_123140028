@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir Kantin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kasir Kantin</h1>
+    <p>Catat belanjaan, hitung total, langsung ada kembaliannya.</p>
+  </header>
+
+  <main>
+    <section class="kotak">
+      <h2>Tambah barang</h2>
+      <form id="form-barang" novalidate>
+        <label for="nama">Nama barang</label>
+        <input type="text" id="nama" placeholder="contoh: Air Mineral">
+        <small class="error" id="error-nama"></small>
+
+        <label for="harga">Harga satuan (Rp)</label>
+        <input type="number" id="harga" placeholder="contoh: 2000">
+        <small class="error" id="error-harga"></small>
+
+        <label for="qty">Jumlah</label>
+        <input type="number" id="qty" placeholder="contoh: 2">
+        <small class="error" id="error-qty"></small>
+
+        <button type="submit">Tambah ke keranjang</button>
+      </form>
+    </section>
+
+    <section class="kotak">
+      <h2>Keranjang belanja</h2>
+      <div class="tabel-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th>Harga Satuan</th>
+              <th>Qty</th>
+              <th>Subtotal</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="isi-keranjang"></tbody>
+        </table>
+      </div>
+      <p id="kosong">Keranjang masih kosong.</p>
+    </section>
+
+    <section class="kotak">
+      <h2>Pembayaran</h2>
+
+      <div class="baris">
+        <span>Total belanja</span>
+        <strong id="total">Rp 0</strong>
+      </div>
+
+      <label for="kode">Kode promo (opsional)</label>
+      <input type="text" id="kode" placeholder="HEMAT10">
+
+      <div class="baris">
+        <span>Diskon</span>
+        <strong id="diskon">Rp 0</strong>
+      </div>
+      <p class="info" id="info-diskon"></p>
+
+      <div class="baris besar">
+        <span>Total akhir</span>
+        <strong id="total-akhir">Rp 0</strong>
+      </div>
+
+      <label for="bayar">Uang bayar (Rp)</label>
+      <input type="number" id="bayar" placeholder="contoh: 50000">
+
+      <div class="baris">
+        <span>Kembalian</span>
+        <strong id="kembalian">Rp 0</strong>
+      </div>
+      <p class="info" id="info-bayar"></p>
+
+      <button type="button" id="btn-reset" class="sekunder">Transaksi baru</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
