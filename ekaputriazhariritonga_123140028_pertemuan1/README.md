@@ -29,7 +29,7 @@ Buka folder `ekaputriazhariritonga_123140028_pertemuan1` di VS Code, lalu jalank
 - [x] Penyimpanan data dengan localStorage
 - [x] Tombol transaksi baru untuk mengosongkan keranjang
 
-## Tangkapan Layar
+## Screenshot Hasil
 
 Tampilan form input utama:
 
