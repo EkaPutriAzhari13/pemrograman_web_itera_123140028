@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catatan Pinjaman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Catatan Pinjaman</h1>
+    <p id="kutipan">Memuat kutipan...</p>
+  </header>
+
+  <main class="container">
+
+    <!-- ringkasan angka di bagian atas -->
+    <section class="ringkasan">
+      <div class="kartu">
+        <span>Masih dipinjam</span>
+        <strong id="total-aktif">0</strong>
+      </div>
+      <div class="kartu">
+        <span>Terlambat</span>
+        <strong id="total-terlambat">0</strong>
+      </div>
+      <div class="kartu">
+        <span>Uang belum kembali</span>
+        <strong id="total-uang">Rp 0</strong>
+      </div>
+    </section>
+
+    <!-- form tambah dan edit dipakai bareng -->
+    <section class="form-box">
+      <h2 id="judul-form">Tambah Pinjaman</h2>
+      <form id="form-pinjaman">
+        <input type="hidden" id="id-edit">
+
+        <label>Nama peminjam
+          <input type="text" id="nama" placeholder="Contoh: Rina" required>
+        </label>
+
+        <label>Barang / keterangan
+          <input type="text" id="barang" placeholder="Contoh: Charger laptop" required>
+        </label>
+
+        <label>Nominal uang (kosongkan kalau bukan uang)
+          <input type="number" id="nominal" min="0" placeholder="0">
+        </label>
+
+        <label>Tenggat dikembalikan
+          <input type="date" id="tenggat" required>
+        </label>
+
+        <div class="baris-tombol">
+          <button type="submit" id="tombol-simpan">Simpan</button>
+          <button type="button" id="tombol-batal" hidden>Batal</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- daftar pinjaman -->
+    <section>
+      <div class="filter">
+        <button class="btn-filter aktif" data-filter="semua">Semua</button>
+        <button class="btn-filter" data-filter="belum">Belum kembali</button>
+        <button class="btn-filter" data-filter="terlambat">Terlambat</button>
+        <button class="btn-filter" data-filter="selesai">Sudah kembali</button>
+      </div>
+
+      <ul id="daftar"></ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>PAW Pertemuan 2 - Eka Putri Azhari Ritonga - 123140028</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

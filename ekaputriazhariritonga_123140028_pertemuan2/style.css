@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f1fa;
+  color: #2d2a3e;
+  line-height: 1.5;
+}
+
+.header {
+  background-color: #6c4ab6;
+  color: white;
+  text-align: center;
+  padding: 28px 16px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+#kutipan {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* kartu ringkasan */
+.ringkasan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.kartu {
+  background: white;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.kartu span {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.kartu strong {
+  font-size: 1.3rem;
+  color: #6c4ab6;
+}
+
+/* form */
+.form-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.form-box h2 {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c4ab6;
+}
+
+.baris-tombol {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 16px;
+  font-size: 0.9rem;
+}
+
+#tombol-simpan {
+  background-color: #6c4ab6;
+  color: white;
+}
+
+#tombol-simpan:hover {
+  background-color: #5a3b9c;
+}
+
+#tombol-batal {
+  background-color: #e5e0f0;
+}
+
+/* filter */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.btn-filter {
+  background-color: #e5e0f0;
+  color: #444;
+}
+
+.btn-filter.aktif {
+  background-color: #6c4ab6;
+  color: white;
+}
+
+/* daftar pinjaman */
+#daftar {
+  list-style: none;
+}
+
+.item {
+  background: white;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-left: 5px solid #6c4ab6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.item.terlambat {
+  border-left-color: #d9534f;
+}
+
+.item.selesai {
+  border-left-color: #5cb85c;
+  opacity: 0.7;
+}
+
+.item h3 {
+  font-size: 1rem;
+}
+
+.item p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  background-color: #eee;
+}
+
+.badge.terlambat {
+  background-color: #f8d7d6;
+  color: #a94442;
+}
+
+.badge.selesai {
+  background-color: #d9f0d9;
+  color: #3c763d;
+}
+
+.aksi {
+  margin-top: 10px;
+  display: flex;
+  gap: 6px;
+}
+
+.aksi button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #eee;
+}
+
+.aksi .hapus {
+  background-color: #f8d7d6;
+  color: #a94442;
+}
+
+.kosong {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888;
+  padding: 20px;
+}
+
+@media (max-width: 520px) {
+  .ringkasan {
+    grid-template-columns: 1fr;
+  }
+}
