@@ -1,0 +1,25 @@
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.book-form label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.book-form .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.book-form .btn-cancel {
+  background: #6b7280;
+}

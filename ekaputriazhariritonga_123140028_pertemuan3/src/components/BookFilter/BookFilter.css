@@ -1,0 +1,13 @@
+.book-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.book-filter input {
+  flex: 2;
+}
+
+.book-filter select {
+  flex: 1;
+}
