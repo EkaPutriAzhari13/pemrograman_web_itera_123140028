@@ -19,3 +19,7 @@ Data.fs*
 .DS_Store
 coverage
 test
+venv/
+__pycache__/
+*.pyc
+*.sqlite
