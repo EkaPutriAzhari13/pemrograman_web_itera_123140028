@@ -3,9 +3,9 @@ import os
 from setuptools import setup, find_packages
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, 'README.txt')) as f:
+with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
     README = f.read()
-with open(os.path.join(here, 'CHANGES.txt')) as f:
+with open(os.path.join(here, 'CHANGES.txt'), encoding='utf-8') as f:
     CHANGES = f.read()
 
 requires = [
@@ -16,6 +16,7 @@ requires = [
     'pyramid_jinja2',
     'pyramid_retry',
     'pyramid_tm',
+    'psycopg2-binary',
     'SQLAlchemy',
     'transaction',
     'zope.sqlalchemy',
